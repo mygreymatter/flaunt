@@ -1,0 +1,14 @@
+{
+    "name": "chic",
+    "version": "1.0.0",
+    "description": "It is a chic app!",
+    "license": "MIT",
+    "repository": "http://github.com/mygreymatter",
+    "scripts": {
+        "start": "nodemon server.js"
+    },
+    "dependencies": {
+        "express": "^4.13.4",
+        "nodemon": "^1.9.1"
+    }
+}
