@@ -1,3 +1,24 @@
+@media screen and (max-width: 480px) {
+    html,
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    a>img {
+        height: 40px;
+        width: 200px;
+    }
+    .no-display {
+        display: none;
+    }
+}
+html,
+body {
+    background-color: #333333;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: #FFFFFF;
+}
 .container-fluid {
     padding-left: 0;
     padding-right: 0;
@@ -11,10 +32,97 @@ a.navbar-brand {
 }
 .navbar {
     margin: 0;
+    background: rgba(102, 102, 102, .5);
+    border: 0;
 }
 .navbar-collapse {
     padding-top: 10px;
 }
 .nav a>span {
     font-size: 20px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #FE800B;
+}
+.parallax-image {
+    height: 800px;
+}
+.landing-img {
+    background: url("../images/snappa_1.png") no-repeat fixed;
+    -webkit-background-size: cover;
+    /* For WebKit*/
+    -moz-background-size: cover;
+    /* Mozilla*/
+    -o-background-size: cover;
+    background-size: cover;
+}
+.collection-img {
+    /*background: url("../images/leisure_at_deck.jpg") no-repeat fixed;*/
+    background: #FFFFFF;
+    -webkit-background-size: cover;
+    /* For WebKit*/
+    -moz-background-size: cover;
+    /* Mozilla*/
+    -o-background-size: cover;
+    background-size: cover;
+}
+.footer {
+    height: 100px;
+    padding-top: 40px;
+}
+.title,
+h1 {
+    color: #000000;
+}
+.collections-row {
+    margin-top: 2%;
+    margin-left: 15%;
+}
+.collections-row>div {
+    margin-right: 4%;
+    margin-bottom: 2%;
+    width: 21%;
+    height: 300px;
+    float: left;
+}
+.image {
+    border: 1px solid grey;
+}
+.image:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+.triangle_right {
+    width: 0;
+    height: 0;
+    margin-top: 100%;
+    border-top: 100px solid transparent;
+    border-left: 80px solid #FF5A00;
+    border-bottom: 100px solid transparent;
+}
+.triangle_right:hover,
+h1.img_description:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #FF5A00;
+}
+.carousel-image {
+    position: relative;
+    width: 100%;
+    /* for IE 6 */
+}
+.carousel-image>img {
+    width: 1500px;
+    height: 730px;
+}
+h1.img_description {
+    position: fixed;
+    left: 4%;
+    bottom: 30%;
+    color: #FFFFFF;
 }

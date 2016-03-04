@@ -2,7 +2,9 @@
 <html>
 
 <head>
-    <title>Chic</title>
+    <title>Saawariya</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/app.css" />
 </head>
@@ -12,7 +14,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <nav class="navbar navbar-default">
+                <nav class="navbar navbar-default navbar-fixed-top">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-2"></div>
@@ -26,36 +28,39 @@
                                         <span class="icon-bar"></span>
                                     </button>
                                     <a class="navbar-brand" href="#">
-                                        <img src="../images/saawariya.png"></img>
+                                        <!--The image was generated using http://cooltext.com-->
+                                        <!--<img src="../images/saawariya.png"></img>-->
+                                        <img src="../images/saawariya2.png"></img>
+                                        <!--<span>Saawariya</span>-->
                                     </a>
                                 </div>
 
                                 <!-- Collect the nav links, forms, and other content for toggling -->
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <ul class="nav navbar-nav navbar-right">
-                                        <li class="" ng-click="showHome()" id="home">
+                                        <li class="" ng-click="" id="home">
                                             <a href="#">
-                                                <span>Home</span>
+                                                <span>Collections</span>
                                             </a>
                                         </li>
-                                        <li id="mission" ng-click="showMission()">
+                                        <li id="mission" ng-click="">
                                             <a href="#">
-                                                <span>Mission</span>
+                                                <span>Stores</span>
                                             </a>
                                         </li>
-                                        <li id="events" ng-click="showEvents()">
+                                        <li id="donate" ng-click="">
                                             <a href="#">
-                                                <span>Events</span>
+                                                <span>Blog</span>
                                             </a>
                                         </li>
-                                        <li id="donate" ng-click="showDonate()">
-                                            <a href="#">
-                                                <span>Donate</span>
-                                            </a>
-                                        </li>
-                                        <li ng-click="showContact()" id="contact">
+                                        <li ng-click="" id="contact">
                                             <a href="#">
                                                 <span>Contact</span>
+                                            </a>
+                                        </li>
+                                        <li ng-click="" id="contact">
+                                            <a href="#">
+                                                <span>Login</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -72,12 +77,27 @@
         </div>
     </div>
 
+
     <ui-view></ui-view>
 
-    <script src="../js/lib/angular.min.js"></script>
-    <script src="../js/lib/angular-ui-router.min.js"></script>
-    <script src="../js/modules/home.js"></script>
-    <script src="../js/app.js"></script>
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-md-12 text-center footer">
+                <div class="center-block">
+                    beyond solutions | Bengaluru
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/lib/bootstrap.min.js"></script>
+    <script src="../js/lib/angular.min.js "></script>
+    <script src="../js/lib/angular-ui-router.min.js "></script>
+    <script src="../js/modules/home.js "></script>
+    <script src="../js/modules/collections.js"></script>
+    <script src="../js/app.js "></script>
 </body>
 
 </html>
