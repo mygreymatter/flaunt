@@ -1,5 +1,5 @@
 (function () {
-    angular.module('ChicApp', ['ui.router', 'HomeModule'])
+    angular.module('ChicApp', ['ui.router', 'HomeModule', 'Collections'])
         .config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         function ($stateProvider, $urlRouterProvider, $locationProvider) {
                 $stateProvider
