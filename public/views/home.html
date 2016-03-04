@@ -10,7 +10,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
         <div class="item active text-center">
-            <div class="carousel-image">
+            <div class="carousel-div">
                 <img src="../images/snappa_1.png" alt="Chania">
                 <h1 class="img_description text-left">Always Welcome</h1>
             </div>
@@ -19,7 +19,7 @@
         <div class="item">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <div class="carousel-image">
+                    <div class="carousel-div">
                         <img src="../images/leisure_at_deck.jpg" alt="Chania">
                         <h1 class="img_description">Boredom got new look!</h1>
                     </div>
@@ -30,7 +30,7 @@
         <div class="item">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <div class="carousel-image">
+                    <div class="carousel-div">
                         <img src="../images/rose_smells_rose.jpg" alt="Flower">
                         <h1 class="img_description">The flowers found a mirror image.</h1>
                     </div>
@@ -41,7 +41,7 @@
         <div class="item">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <div class="carousel-image">
+                    <div class="carousel-div">
                         <img src="../images/stroll_in_grass.jpg" alt="Flower">
                         <h1 class="img_description">Seclusion is always selective!</h1>
                     </div>
@@ -69,11 +69,12 @@
             </div>
         </div>
     </div>
-    <div class="row ">
+    <div class="row">
         <div class="col-md-10 text-center collections">
             <div class="collections-row" ng-repeat="row in rows">
-                <div ng-repeat="i in row.images">
+                <div ng-repeat="i in row.images" class="collections-div">
                     <img ng-src="../images/{{img_name}}.jpg" class="image" />
+                    <h1>Venkatagiri</h1>
                 </div>
             </div>
         </div>
@@ -94,8 +95,9 @@
     <div class="row ">
         <div class="col-md-10 text-center collections">
             <div class="collections-row" ng-repeat="row in rows">
-                <div ng-repeat="i in row.images">
+                <div ng-repeat="i in row.images" class="collections-div">
                     <img ng-src="../images/{{store}}.jpg" class="image" />
+                    <h1>Desi Design</h1>
                 </div>
             </div>
         </div>
