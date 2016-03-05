@@ -52,16 +52,7 @@
     </div>
 </div>
 
-<!---->
-<!--<div class="container-fluid no-display">
-    <div class=" row ">
-        <div class="col-md-12 col-sm-12 text-center parallax-image landing-img" id="slideshow" ng-style="{'background':'url({{slide_image}}) no-repeat fixed','background-size':'cover'}">
-
-        </div>
-    </div>
-</div>-->
-
-<div class="container-fluid parallax-image collection-img">
+<div class="container-fluid parallax-image collection-img" id="collections">
     <div class="row">
         <div class="col-md-12">
             <div class="title text-center">
@@ -74,7 +65,15 @@
             <div class="collections-row" ng-repeat="row in rows">
                 <div ng-repeat="i in row.images" class="collections-div wow fadeIn" data-wow-delay="1s">
                     <img ng-src="../images/{{img_name}}.jpg" class="image" />
-                    <h1>Venkatagiri</h1>
+                    <div class="collection-item-details">
+                        <span>
+                            <div class="text-left collection-item-name"><strong>Venkatagiri</strong></div>
+                            <div class="text-left collection-item-price">&#8377;300</div>
+                        </span>
+                        <span class="collection-item-buy">
+                                <i class="material-icons md-dark">local_grocery_store</i>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,7 +83,7 @@
     </div>
 </div>
 
-<div class="container-fluid parallax-image collection-img">
+<div class="container-fluid parallax-image collection-img" id="stores">
     <div class="row">
         <div class="col-md-12">
             <div class="title text-center">
@@ -97,7 +96,9 @@
             <div class="collections-row" ng-repeat="row in rows">
                 <div ng-repeat="i in row.images" class="collections-div wow fadeIn" data-wow-delay="1s">
                     <img ng-src="../images/{{store}}.jpg" class="image" />
-                    <h1>Desi Design</h1>
+                    <div class="store-item-details text-center">
+                        Paisley
+                    </div>
                 </div>
             </div>
         </div>

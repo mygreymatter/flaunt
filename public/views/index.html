@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/animate.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/material-icons.css" />
     <link rel="stylesheet" type="text/css" href="../css/app.css" />
 
 </head>
 
-<body ng-app="ChicApp">
+<body ng-app="ChicApp" data-spy="scroll" data-target=".navbar" data-offset="50">
 
     <div class="container-fluid">
         <div class="row">
@@ -29,7 +31,7 @@
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
                                     </button>
-                                    <a class="navbar-brand" href="#">
+                                    <a class="navbar-brand" href="#myCarousel">
                                         <!--The image was generated using http://cooltext.com-->
                                         <!--<img src="../images/saawariya.png"></img>-->
                                         <img src="../images/saawariya2.png"></img>
@@ -40,27 +42,27 @@
                                 <!-- Collect the nav links, forms, and other content for toggling -->
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <ul class="nav navbar-nav navbar-right">
-                                        <li class="" ng-click="" id="home">
-                                            <a href="#">
+                                        <li class="" ng-click="">
+                                            <a href="#collections">
                                                 <span>Collections</span>
                                             </a>
                                         </li>
-                                        <li id="mission" ng-click="">
-                                            <a href="#">
+                                        <li ng-click="">
+                                            <a href="#stores">
                                                 <span>Stores</span>
                                             </a>
                                         </li>
-                                        <li id="donate" ng-click="">
+                                        <li ng-click="">
+                                            <a href="#contact">
+                                                <span>Contact</span>
+                                            </a>
+                                        </li>
+                                        <li ng-click="">
                                             <a href="#">
                                                 <span>Blog</span>
                                             </a>
                                         </li>
-                                        <li ng-click="" id="contact">
-                                            <a href="#">
-                                                <span>Contact</span>
-                                            </a>
-                                        </li>
-                                        <li ng-click="" id="contact">
+                                        <li ng-click="">
                                             <a href="#">
                                                 <span>Login</span>
                                             </a>
@@ -82,7 +84,7 @@
 
     <ui-view></ui-view>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="contact">
         <div class="row ">
             <div class="col-md-12 text-center footer">
                 <div class="center-block">
@@ -102,6 +104,20 @@
     <script src="../js/lib/wow.js"></script>
     <script>
         new WOW().init();
+
+        $(document).ready(function() {
+            $('a[href^="#"]').on('click', function() {
+                console.log('Clicked!');
+                var target = $($(this).attr('href'));
+
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - 70
+                    }, 1000);
+                }
+            })
+        });
 
     </script>
     <script src="../js/app.js "></script>

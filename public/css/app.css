@@ -32,7 +32,8 @@ a.navbar-brand {
 }
 .navbar {
     margin: 0;
-    background: rgba(102, 102, 102, .5);
+    background: /*rgba(102, 102, 102, .5)*/
+    #333333;
     border: 0;
 }
 .navbar-collapse {
@@ -45,9 +46,21 @@ a.navbar-brand {
     color: #FFFFFF;
 }
 .navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li.active > a {
     color: #FE800B;
+    background: none;
 }
+
+/*.nav li a:hover {
+    color: #f33 !important;
+    background: none;
+}
+.nav li.active a {
+    color: #f55;
+    text-decoration: underline;
+}*/
+
 .parallax-image {
     height: 800px;
 }
@@ -106,20 +119,43 @@ h1.img_description {
 }
 .collections-row>div {
     margin-right: 4%;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
     width: 21%;
     height: 300px;
     float: left;
 }
-.collections-row>div:hover {
+.collections-row>div>img:hover {
     cursor: pointer;
-    transform: scale(1.1);
     opacity: 0.8;
 }
-.collections-div {
-    position: relative;
+.collection-item-details,
+.store-item-details {
+    background-color: #333333;
+    height: 15%;
 }
-.collections-div>h1 {
+.store-item-details {
+    padding-top: 5%;
+}
+.collection-item-details>span {
+    height: 100%;
+    padding: 2%;
+}
+.collection-item-details>span:first-child {
+    float: left;
+}
+.collection-item-buy {
+    float: right;
+    background-color: #E1E1E1;
+    color: #333333;
+}
+.collection-item-buy:hover {
+    cursor: pointer;
+}
+span.collection-item-buy {
+    padding-top: 5%;
+}
+
+/*.collections-div>h1 {
     position: absolute;
     width: 100%;
     margin: 0;
@@ -127,7 +163,8 @@ h1.img_description {
     opacity: 0;
     color: #FFFFFF;
     background-color: #333333;
-}
+}*/
+
 .collections-div:hover>h1 {
     opacity: 1;
 }
