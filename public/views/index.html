@@ -2,20 +2,26 @@
 <html>
 
 <head>
-    <title>Saawariya</title>
+    <title>Flaunt</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/animate.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/material-icons.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-material-design.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/ripples.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont-style.css" />
     <link rel="stylesheet" type="text/css" href="../css/app.css" />
 
 </head>
 
-<body ng-app="ChicApp" data-spy="scroll" data-target=".navbar" data-offset="50">
+<!--<body ng-app="ChicApp" data-spy="scroll" data-target=".navbar" data-offset="50">-->
 
-    <div class="container-fluid">
+<body ng-app="ChicApp">
+
+    <!--Navbar START -->
+    <div class="container-fluid" id="navigation-bar">
         <div class="row">
             <div class="col-md-12">
                 <nav class="navbar navbar-default navbar-fixed-top">
@@ -34,7 +40,7 @@
                                     <a class="navbar-brand" href="#myCarousel">
                                         <!--The image was generated using http://cooltext.com-->
                                         <!--<img src="../images/saawariya.png"></img>-->
-                                        <img src="../images/saawariya2.png"></img>
+                                        <img src="../images/flaunt.jpg" class="img-responsive">
                                         <!--<span>Saawariya</span>-->
                                     </a>
                                 </div>
@@ -42,27 +48,27 @@
                                 <!-- Collect the nav links, forms, and other content for toggling -->
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <ul class="nav navbar-nav navbar-right">
-                                        <li class="" ng-click="">
+                                        <li>
                                             <a href="#collections">
                                                 <span>Collections</span>
                                             </a>
                                         </li>
-                                        <li ng-click="">
+                                        <li>
                                             <a href="#stores">
                                                 <span>Stores</span>
                                             </a>
                                         </li>
-                                        <li ng-click="">
+                                        <li>
                                             <a href="#contact">
                                                 <span>Contact</span>
                                             </a>
                                         </li>
-                                        <li ng-click="">
+                                        <li>
                                             <a href="#">
                                                 <span>Blog</span>
                                             </a>
                                         </li>
-                                        <li ng-click="">
+                                        <li>
                                             <a href="#">
                                                 <span>Login</span>
                                             </a>
@@ -80,11 +86,26 @@
             </div>
         </div>
     </div>
-
+    <!--Navbar END -->
 
     <ui-view></ui-view>
 
-    <div class="container-fluid" id="contact">
+    <div id="copyright">
+        <div class="container">
+            <div class="col-md-6">
+                <p class="pull-left">© 2016 pack technologies.</p>
+
+            </div>
+            <div class="col-md-6">
+                <p class="pull-right">Template by <a href="http://bootstrapious.com/e-commerce-templates">Bootstrap Ecommerce Templates</a> with support from <a href="http://kakusei.cz">Designové předměty</a>
+                    <!-- Not removing these links is part of the licence conditions of the template. Thanks for understanding :) -->
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- *** COPYRIGHT END *** -->
+
+    <div class="wow fadeIn container-fluid" id="contact" data-wow-delay="3s">
         <div class="row ">
             <div class="col-md-12 text-center footer">
                 <div class="center-block">
@@ -94,11 +115,12 @@
         </div>
     </div>
 
-
     <script src="../js/lib/jquery.min.js"></script>
     <script src="../js/lib/bootstrap.min.js"></script>
     <script src="../js/lib/angular.min.js "></script>
     <script src="../js/lib/angular-ui-router.min.js "></script>
+    <script src="../js/lib/material.min.js"></script>
+    <script src="../js/lib/ripples.min.js"></script>
     <script src="../js/modules/home.js "></script>
     <script src="../js/modules/collections.js"></script>
     <script src="../js/lib/wow.js"></script>
@@ -106,17 +128,25 @@
         new WOW().init();
 
         $(document).ready(function() {
-            $('a[href^="#"]').on('click', function() {
-                console.log('Clicked!');
-                var target = $($(this).attr('href'));
 
+            console.log("Width: " + screen.width);
+            if (screen.width < 400) {
+                console.log("Width less than 400");
+                $('.item').removeClass('col-xs-6').addClass('col-xs-12');
+                $('.item').hide();
+            }
+            $('a[href^="#"]').on('click', function() {
+                var target = $($(this).attr('href'));
                 if (target.length) {
                     event.preventDefault();
                     $('html, body').animate({
-                        scrollTop: target.offset().top - 70
+                        scrollTop: target.offset().top
                     }, 1000);
                 }
             })
+
+            /*$('.navbar').on('activate.bs.scrollspy', function(e) { console.log('SCrollspy: ' + Object.keys(e.currentTarget)); $("#contact").trigger("click"); })*/
+
         });
 
     </script>
