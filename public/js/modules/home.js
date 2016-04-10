@@ -1,24 +1,51 @@
 (function () {
-    angular.module('HomeModule', [])
-        .controller('HomeController', function ($scope, $interval) {
+    angular.module('HomeModule', ['Products'])
+        .controller('HomeController', ['$scope', '$state', '$interval', 'products',
+                                       function ($scope, $state, $interval, products) {
+                console.log('Products: ' + products[0].image);
 
-            var a = angular.element(document.getElementById('a')),
-                b = angular.element(document.getElementById('b')),
-                c = angular.element(document.getElementById('c')),
-                d = angular.element(document.getElementById('d')),
-                src = "../images/";
+                $scope.products = products;
 
-            $scope.slide_image = src + "rose_smells_rose" + ".jpg";
-            console.log('Slide Image: ' + $scope.slide_image);
+                var a = angular.element(document.getElementById('a')),
+                    b = angular.element(document.getElementById('b')),
+                    c = angular.element(document.getElementById('c')),
+                    d = angular.element(document.getElementById('d')),
+                    src = "../images/screens/";
 
-            $scope.name = 'Collections';
-            $scope.rows = [{
-                'images': [1, 2, 3, 4]
-            }, {
-                'images': [1, 2, 3, 4]
-            }];
-            $scope.img_name = "saree_1";
-            $scope.store = "store_2";
+                $scope.slide_image = src + "rose_smells_rose" + ".jpg";
+                $scope.widthClass = screen.width < 400 ? "col-xs-12 col-sm-6 col-md-3 item" :
+                    "col-xs-6 col-sm-6 col-md-3 item";
 
-        });
+                $scope.stores = [{
+                    'image': 'store_2',
+                    'name': 'Paisley'
+	               }, {
+                    'image': 'store_2',
+                    'name': 'Aishwarya Design Studio'
+	               }, {
+                    'image': 'store_2',
+                    'name': 'Studio Rudraksh'
+	               }, {
+                    'image': 'store_2',
+                    'name': 'Vajra'
+	               }, {
+                    'image': 'store_2',
+                    'name': 'Studio Upasana'
+	               }, {
+                    'image': 'store_2',
+                    'name': 'Smriti\'s'
+	               }, {
+                    'image': 'store_2',
+                    'name': 'Obsession'
+	               }, {
+                    'image': 'store_2',
+                    'name': 'Banwery'
+	               }];
+
+                $scope.showProduct = function () {
+                    console.log('Show Product');
+                    $state.go('Details');
+                };
+
+                        }]);
 })();

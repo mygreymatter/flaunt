@@ -1,115 +1,124 @@
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
+<div class="container no-display">
+    <div class="row">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-        <div class="item active text-center">
-            <div class="carousel-div">
-                <img src="../images/snappa_1.png" alt="Chania">
-                <h1 class="img_description text-left">Always Welcome</h1>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="row">
-                <div class="col-md-12 text-center">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item text-center">
                     <div class="carousel-div">
-                        <img src="../images/leisure_at_deck.jpg" alt="Chania">
-                        <h1 class="img_description">Boredom got new look!</h1>
+                        <img src="../images/snappa_1.png" alt="Chania" class="img-responsive">
+                        <h1 class="img_description text-left">Always Welcome</h1>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="item">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="carousel-div">
-                        <img src="../images/rose_smells_rose.jpg" alt="Flower">
-                        <h1 class="img_description">The flowers found a mirror image.</h1>
+                <div class="item">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="carousel-div">
+                                <img src="../images/leisure_at_deck.jpg" alt="Chania" class="img-responsive">
+                                <h1 class="img_description">Boredom got new look!</h1>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="item">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="carousel-div">
-                        <img src="../images/stroll_in_grass.jpg" alt="Flower">
-                        <h1 class="img_description">Seclusion is always selective!</h1>
+                <div class="item">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="carousel-div">
+                                <img src="../images/rose_smells_rose.jpg" alt="Flower" class="img-responsive">
+                                <h1 class="img_description">The flowers found a mirror image.</h1>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+                <div class="item active">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="carousel-div">
+                                <img src="../images/stroll_in_grass.jpg" alt="Flower" class="img-responsive">
+                                <h1 class="img_description">Seclusion is always selective!</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<!---->
-<!--<div class="container-fluid no-display">
-    <div class=" row ">
-        <div class="col-md-12 col-sm-12 text-center parallax-image landing-img" id="slideshow" ng-style="{'background':'url({{slide_image}}) no-repeat fixed','background-size':'cover'}">
+<section id="collections">
+    <div class="container">
 
+        <div class="well well-sm text-center">
+            <h1 class="title">Collections</h1>
         </div>
-    </div>
-</div>-->
 
-<div class="container-fluid parallax-image collection-img">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="title text-center">
-                <h1>Collections</h1>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-10 text-center collections">
-            <div class="collections-row" ng-repeat="row in rows">
-                <div ng-repeat="i in row.images" class="collections-div wow fadeIn" data-wow-delay="1s">
-                    <img ng-src="../images/{{img_name}}.jpg" class="image" />
-                    <h1>Venkatagiri</h1>
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-3 item" ng-repeat="i in products">
+                <div class="wow fadeIn panel panel-default product" data-wow-delay="1s" align="center" ng-click="showProduct()">
+                    <div class="panel-body">
+                        <img ng-src="../images/screens/{{i.image}}.jpg" class="img-responsive" />
+                    </div>
+                    <div class="panel-footer">
+                        <span class="text-left">
+                            <h3 class="item-name"><small>{{i.name}}</small></h3>
+                            <p>&#8377; {{i.price}}</p>
+                        </span>
+                        <span class="shopping_cart glyphicons glyphicons-play">
+                            <!--<i class="material-icons  text-center">shopping_cart</i>-->
+                        </span>
+                        <!--<a href="#" class="btn btn-sm btn-primary"><i class="icon icon-basket"></i>Buy</a>-->
+
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-2">
-            <div class="triangle_right wow fadeIn" data-wow-delay="2s"></div>
-        </div>
     </div>
-</div>
+</section>
 
-<div class="container-fluid parallax-image collection-img">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="title text-center">
-                <h1>Stores</h1>
-            </div>
+<section id="stores">
+    <div class="container">
+        <div class="well well-sm text-center">
+            <h1 class="title">Stores</h1>
         </div>
-    </div>
-    <div class="row ">
-        <div class="col-md-10 text-center collections">
-            <div class="collections-row" ng-repeat="row in rows">
-                <div ng-repeat="i in row.images" class="collections-div wow fadeIn" data-wow-delay="1s">
-                    <img ng-src="../images/{{store}}.jpg" class="image" />
-                    <h1>Desi Design</h1>
+
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-3 item" ng-repeat="i in stores">
+                <div class="wow fadeIn panel panel-default" data-wow-delay="1s" align="center">
+                    <div class="panel-body">
+                        <img ng-src="../images/stores/{{i.image}}.jpg" class="img-responsive" />
+                    </div>
+                    <div class="panel-footer">
+                        <span class="text-center">
+                        <h4 class="item-name">{{i.name}}</h4>
+                    </span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-2">
-            <div class="triangle_right wow fadeIn" data-wow-delay="2s"></div>
-        </div>
     </div>
-</div>
-<!--<div class="container-fluid ">
-        <div class="row ">
-            <div class="col-md-12 text-center ">
-                <img src="../images/rose_smells_rose.jpg " width="100% " />
-            </div>
-        </div>
-    </div>-->
+</section>
+
+<script>
+    $(document).ready(function() {
+
+        console.log("Width: " + screen.width);
+        if (screen.width < 400) {
+            console.log("Width less than 400");
+            $('.item').removeClass('col-xs-6').addClass('col-xs-12');
+            /*$('.item').hide();*/
+        }
+
+    });
+
+</script>
