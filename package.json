@@ -5,6 +5,8 @@
     "license": "MIT",
     "repository": "http://github.com/mygreymatter",
     "scripts": {
+        "build-css": "./bin/build-css",
+        "watch-css": "./bin/watch-css",
         "start": "nodemon server.js"
     },
     "dependencies": {

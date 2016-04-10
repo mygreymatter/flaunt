@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container no-display">
     <div class="row">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -64,8 +64,8 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-3 item" ng-repeat="i in collections">
-                <div class="wow fadeIn panel panel-default" data-wow-delay="1s" align="center">
+            <div class="col-xs-6 col-sm-6 col-md-3 item" ng-repeat="i in products">
+                <div class="wow fadeIn panel panel-default product" data-wow-delay="1s" align="center" ng-click="showProduct()">
                     <div class="panel-body">
                         <img ng-src="../images/screens/{{i.image}}.jpg" class="img-responsive" />
                     </div>

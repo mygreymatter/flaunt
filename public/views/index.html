@@ -37,7 +37,7 @@
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
                                     </button>
-                                    <a class="navbar-brand" href="#myCarousel">
+                                    <a class="navbar-brand" href="/">
                                         <!--The image was generated using http://cooltext.com-->
                                         <!--<img src="../images/saawariya.png"></img>-->
                                         <img src="../images/flaunt.jpg" class="img-responsive">
@@ -64,14 +64,20 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="/bloglist">
                                                 <span>Blog</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="#" data-toggle="modal" data-target="#login-modal">
                                                 <span>Login</span>
                                             </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="modal" data-target="#signup-modal">
+                                                <span>Signup</span>
+                                            </a>
+
                                         </li>
                                     </ul>
                                 </div>
@@ -90,30 +96,145 @@
 
     <ui-view></ui-view>
 
-    <div id="copyright">
-        <div class="container">
-            <div class="col-md-6">
-                <p class="pull-left">© 2016 pack technologies.</p>
 
-            </div>
-            <div class="col-md-6">
-                <p class="pull-right">Template by <a href="http://bootstrapious.com/e-commerce-templates">Bootstrap Ecommerce Templates</a> with support from <a href="http://kakusei.cz">Designové předměty</a>
-                    <!-- Not removing these links is part of the licence conditions of the template. Thanks for understanding :) -->
-                </p>
+
+    <footer class="wow fadeIn container-fluid" id="contact" data-wow-delay="1s">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="container">
+                    <div class="col-md-4">
+                        <h4>Pages</h4>
+
+                        <ul>
+                            <li><a href="text.html">About us</a>
+                            </li>
+                            <li><a href="text.html">Terms and conditions</a>
+                            </li>
+                            <li><a href="faq.html">FAQ</a>
+                            </li>
+                            <li><a href="contact.html">Contact us</a>
+                            </li>
+                        </ul>
+
+                        <hr>
+
+                        <h4>User section</h4>
+
+                        <ul>
+                            <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+                            </li>
+                            <li><a href="" data-toggle="modal" data-target="#signup-modal">Register</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Where to find us</h4>
+
+                        <p><strong>pack technologies</strong>
+                            <br>13/25 New Avenue
+                            <br>New Heaven
+                            <br>45Y 73J
+                            <br>England
+                            <br>
+                            <strong>Great Britain</strong>
+                        </p>
+
+                        <a href="/contact">Go to contact page</a>
+
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Get the news</h4>
+
+                        <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control">
+                                <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Subscribe!</button>
+                        </span>
+
+                            </div>
+                            <!-- /input-group -->
+                        </form>
+                        <hr>
+                        <h4>Stay in touch</h4>
+                        <p class="social">
+                            <a href="#" class="facebook external" data-animate-hover="shake"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="twitter external" data-animate-hover="shake"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="instagram external" data-animate-hover="shake"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="gplus external" data-animate-hover="shake"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="email external" data-animate-hover="shake"><i class="fa fa-envelope"></i></a>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- *** COPYRIGHT END *** -->
 
-    <div class="wow fadeIn container-fluid" id="contact" data-wow-delay="3s">
-        <div class="row ">
-            <div class="col-md-12 text-center footer">
-                <div class="center-block">
-                    beyond solutions | Bengaluru
+    </footer>
+
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4>Customer Login</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="customer-orders.html" method="post">
+                        <div class="form-group login-form-input">
+                            <input type="text" class="form-control" id="email-modal" placeholder="email">
+                        </div>
+                        <div class="form-group login-form-input">
+                            <input type="password" class="form-control" id="password-modal" placeholder="password">
+                        </div>
+
+                        <p class="text-center">
+                            <button class="filter btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
+                        </p>
+
+                    </form>
+
+                    <p class="text-center text-muted">Not registered yet?</p>
+                    <p class="text-center text-muted"><a href="register.html"><strong>Register now</strong></a>! It is easy and done in 1&nbsp;minute and gives you access to special discounts and much more!</p>
+
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="Signup" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4>Sign Up</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="customer-orders.html" method="post">
+                        <div class="form-group login-form-input">
+                            <input type="text" class="form-control" id="name-modal" placeholder="name">
+                        </div>
+                        <div class="form-group login-form-input">
+                            <input type="text" class="form-control" id="email-modal" placeholder="email">
+                        </div>
+                        <div class="form-group login-form-input">
+                            <input type="password" class="form-control" id="password-modal" placeholder="password">
+                        </div>
+
+                        <p class="text-center">
+                            <button class="filter btn btn-primary"><i class="fa fa-user-md"></i>Sign Up</button>
+                        </p>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="../js/lib/jquery.min.js"></script>
     <script src="../js/lib/bootstrap.min.js"></script>
@@ -121,6 +242,7 @@
     <script src="../js/lib/angular-ui-router.min.js "></script>
     <script src="../js/lib/material.min.js"></script>
     <script src="../js/lib/ripples.min.js"></script>
+    <script src="../js/factories/ProductFactory.js"></script>
     <script src="../js/modules/home.js "></script>
     <script src="../js/modules/collections.js"></script>
     <script src="../js/lib/wow.js"></script>
