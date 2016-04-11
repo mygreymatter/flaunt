@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <legend>
+                <h1>{{name}}</h1></legend>
+            <form ng-submit="login(user)">
+                <fieldset>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email" ng-model="user.username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="user.password">
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="button" class="btn btn-default">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <p class="text-danger">{{errorMessage}}</p>
+                    </div>
+                </fieldset>
+            </form>
+            <div class="text-center">
+                New User?
+                <input type="button" value="Signup" ng-click="signup()" class="btn btn-primary">
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
