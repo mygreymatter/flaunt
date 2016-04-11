@@ -3,7 +3,16 @@ var express = require('express'),
     PORT = process.env.PORT || 5000;
 
 app.set('port', PORT);
+
 app.use(express.static(__dirname + '/public'));
+
+require('./routes/authrouter.js')(app);
+
+/*app.get('/login', function (req, res) {
+
+    console.log('Call login');
+    res.json();
+});*/
 
 app.get('/*', function (req, res) {
     res.sendFile(__dirname + '/public/views/index.html');
