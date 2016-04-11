@@ -1,18 +1,7 @@
-<!--
-<h1>Login</h1>
-
-<form ng-submit="login(user)">
-    <input type="text" placeholder="username" ng-model="user.username">
-    <br/>
-    <input type="password" placeholder="username" ng-model="user.password">
-    <button type="submit">Login</button>
-</form>-->
-
-
-<!--<div class="container">
+<div class="container">
     <div class="row">
         <div class="col-md-4"></div>
-        <div class="col-md-4">-->
+        <div class="col-md-4">
             <legend>
                 <h1>{{name}}</h1></legend>
             <form ng-submit="login(user)">
@@ -26,6 +15,7 @@
                     <div class="form-group text-center">
                         <button type="button" class="btn btn-default">Cancel</button>
                         <button type="submit" class="btn btn-primary">Login</button>
+                        <p class="text-danger">{{errorMessage}}</p>
                     </div>
                 </fieldset>
             </form>
@@ -33,7 +23,7 @@
                 New User?
                 <input type="button" value="Signup" ng-click="signup()" class="btn btn-primary">
             </div>
-        <!--</div>
-<div class="col-md-4"></div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
 </div>
-</div>-->

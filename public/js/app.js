@@ -1,5 +1,5 @@
 (function () {
-    angular.module('flauntapp', ['ui.router', 'Home', 'Login', 'Signup'])
+    angular.module('flauntapp', ['ui.router', 'Home', 'Login', 'Signup', 'Authenticator'])
         .config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
             function ($stateProvider, $urlRouterProvider, $locationProvider) {
                 $stateProvider
@@ -7,12 +7,12 @@
                         url: '/',
                         templateUrl: '../views/home.html',
                         controller: 'HomeCtrl'
-                    }).state('Home.Login', {
-                        url: 'login',
+                    }).state('Login', {
+                        url: '/login',
                         templateUrl: '../views/login.html',
                         controller: 'LoginCtrl'
-                    }).state('Home.Signup', {
-                        url: 'signup',
+                    }).state('Signup', {
+                        url: '/signup',
                         templateUrl: '../views/signup.html',
                         controller: 'SignupCtrl'
                     });

@@ -1,17 +1,16 @@
 (function () {
-    angular.module('Home', [])
-        .controller('HomeCtrl', ['$scope', '$http', '$state',
-            function ($scope, $http, $state) {
+    angular.module('Home', ['Authenticator'])
+        .controller('HomeCtrl', ['$scope', '$http', '$state', 'AuthFactory',
+            function ($scope, $http, $state, AuthFactory) {
 
                 $scope.toBeShown = $state.is('Home');
+                $scope.isLoggedIn = AuthFactory.isLoggedIn;
                 $scope.login = function () {
-                    $state.go("Home.Login");
-                    $scope.toBeShown = false;
+                    $state.go("Login");
                 };
 
                 $scope.signup = function () {
-                    $state.go("Home.Signup");
-                    $scope.toBeShown = false;
+                    $state.go("Signup");
                 };
 
 	   }]);
