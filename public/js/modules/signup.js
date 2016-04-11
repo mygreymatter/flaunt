@@ -1,8 +1,7 @@
 (function () {
     angular.module('Signup', ['Authenticator'])
-        .controller('SignupCtrl', ['$scope', '$http', '$state', 'AuthFactory',
-
-            function ($scope, $http, $state, AuthFactory) {
+        .controller('SignupCtrl', ['$scope', '$rootScope', '$http', '$state', 'AuthFactory',
+            function ($scope, $rootScope, $http, $state, AuthFactory) {
                 $scope.name = 'Signup';
                 $scope.fd = new FormData();
                 $scope.errorMessage = '';
@@ -12,8 +11,9 @@
 
                     $http.post('/signup', user).then(function (response) {
                         console.log("SignUp: " + response.status);
-                        AuthFactory.saveToken(response.data.token);
-                        $state.go('Home');
+
+                        angular.element('#signup-modal').modal('hide');
+
                     }, function (err) {
                         console.log("Error");
                         if (err.status === 500)

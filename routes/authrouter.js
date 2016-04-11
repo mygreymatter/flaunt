@@ -20,14 +20,15 @@ module.exports = function (app, passport) {
                 }
 
                 console.log("Found User: " + user);
-                /*if (user.validPassword(req.body.password))
+                if (user.validPassword(req.body.password))
                     return res.json({
                         status: 'successful login',
                         token: user.generateJWT()
                     });
+
                 return res.status(500).json({
-                    status: responses.INVALID_PASSWORD*/
-                return res.json();
+                    status: responses.INVALID_PASSWORD
+                });
             });
     });
 

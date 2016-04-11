@@ -13,5 +13,10 @@
                     $state.go("Signup");
                 };
 
+                $scope.logout = function () {
+                    AuthFactory.logout();
+                    $scope.isLoggedIn = false;
+                };
+
 	   }]);
 })();

@@ -15,7 +15,7 @@
 
             auth.isLoggedIn = function () {
                 var token = auth.getToken();
-                console.log('Token: ' + token);
+                console.log('Login Token: ' + token);
 
                 if (!(token === undefined || token === "undefined")) {
                     var payload = JSON.parse($window.atob(token.split('.')[1]));
@@ -73,7 +73,7 @@
                 $window.localStorage.removeItem('passport-local');
 
                 console.log('Token: ' + $window.localStorage['passport-local']);
-                $state.go('Login');
+                //$state.go('Login');
             };
 
             return auth;
