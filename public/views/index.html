@@ -4,7 +4,7 @@
 <head>
     <title>Flaunt</title>
     <meta charset="utf-8">
-<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/app.css">
 </head>
@@ -18,21 +18,14 @@
                 <div class="col-md-8">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
                         <a class="navbar-brand" href="/">
                             <h1>Flaunt</h1>
                         </a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <!--<li>
+                    <ul class="nav navbar-nav navbar-right">
+                        <!--<li>
                                 <a href="#collections">
                                     <span>Collections</span>
                                 </a>
@@ -47,38 +40,37 @@
                                     <span>Contact</span>
                                 </a>
                             </li>-->
-                            <li ng-cloak>
-                                <div class="search-bar">
-                                    <span class="glyphicon glyphicon-search"></span>
-                                    <input type="search" class="form-control" placeholder="Search" />
-                                </div>
+                        <li ng-cloak>
+                            <div class="search-bar">
+                                <span class="glyphicon glyphicon-search"></span>
+                                <input type="search" class="form-control" placeholder="Search" />
+                            </div>
 
-                            </li>
-                            <li ng-cloak>
-                                <a href="/bloglist" class="text-center">
-                                    <span>Blog</span>
-                                </a>
-                            </li>
-                            <li ng-hide="hide" ng-cloak>
-                                <a href="#" data-toggle="modal" data-target="#login-modal">
-                                    <span>Login</span>
-                                </a>
-                            </li>
-                            <li ng-hide="hide" ng-cloak>
-                                <a href="#" data-toggle="modal" data-target="#signup-modal">
-                                    <span>Signup</span>
-                                </a>
+                        </li>
+                        <li ng-cloak>
+                            <a href="/bloglist" class="text-center">
+                                <span>Blog</span>
+                            </a>
+                        </li>
+                        <li ng-hide="hide" ng-cloak>
+                            <a href="#" data-toggle="modal" data-target="#login-modal">
+                                <span>Login</span>
+                            </a>
+                        </li>
+                        <li ng-hide="hide" ng-cloak>
+                            <a href="#" data-toggle="modal" data-target="#signup-modal">
+                                <span>Signup</span>
+                            </a>
 
-                            </li>
-                            <li ng-show="hide" ng-cloak>
-                                <a href="#" ng-click="logout()">
-                                    <span>Logut</span>
-                                </a>
+                        </li>
+                        <li ng-show="hide" ng-cloak>
+                            <a href="#" ng-click="logout()">
+                                <span>Logut</span>
+                            </a>
 
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.navbar-collapse -->
+                        </li>
+                    </ul>
+
                 </div>
                 <!-- /.container-fluid -->
             </div>
