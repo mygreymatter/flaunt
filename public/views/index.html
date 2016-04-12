@@ -11,7 +11,7 @@
 
 <body ng-app="flauntapp">
 
-    <nav class="navbar navbar-default navbar-fixed-top" ng-controller="NavbarCtrl">
+    <nav class="navbar navbar-default" ng-controller="NavbarCtrl">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-2"></div>
@@ -25,21 +25,7 @@
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <ul class="nav navbar-nav navbar-right">
-                        <!--<li>
-                                <a href="#collections">
-                                    <span>Collections</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#stores">
-                                    <span>Stores</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contact">
-                                    <span>Contact</span>
-                                </a>
-                            </li>-->
+
                         <li ng-cloak>
                             <div class="search-bar">
                                 <span class="glyphicon glyphicon-search"></span>
@@ -77,8 +63,28 @@
             <div class="col-md-2"></div>
         </div>
     </nav>
+    <section class="">
 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
 
+                <div class="col-md-2 categories text-center">
+                    <span><label>Clothes</label></span>
+                </div>
+                <div class="col-md-2 categories text-center">
+                    <span><label>Bags</label></span>
+                </div>
+                <div class="col-md-2 categories text-center">
+                    <span><label>Accessories</label></span>
+                </div>
+                <div class="col-md-2 categories text-center">
+                    <span><label>FootWear</label></span>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <div class="container main-content">
         <ui-view></ui-view>
