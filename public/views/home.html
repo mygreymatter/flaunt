@@ -1,17 +1,192 @@
-<div class="container">
+<div class="container-fluid no-display">
     <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4 text-center">
-            <div ng-show="toBeShown">
-                <h1>Home</h1>
-                <!--<button ng-click="login()" ng-hide="isLoggedIn" class="btn btn-primary">Login</button>
-<button ng-click="signup()" ng-hide="isLoggedIn" class="btn btn-primary">Signup</button>
-<button ng-click="logout()" ng-show="isLoggedIn" class="btn btn-primary">Logout</button>-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item text-center active">
+                    <img src="../images/image1.jpg" alt="Chania" class="img-responsive">
+                    <div class="carousel-caption">
+                        <h1 class="img_description text-left">Always Welcome</h1>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <img src="../images/image2.jpg" alt="Chania" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h1 class="img_description">Boredom got new look!</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <img src="../images/image3.jpg" alt="Flower" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h1 class="img_description">The flowers found a mirror image.</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <div class="item active">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="carousel-div">
+                                <img src="../images/stroll_in_grass.jpg" alt="Flower" class="img-responsive">
+                                <h1 class="img_description">Seclusion is always selective!</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <!-- Controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
             </div>
 
-            <ui-view></ui-view>
-
         </div>
-        <div class="col-md-4"></div>
+        <!--end of carousel-->
     </div>
 </div>
+
+<section id="clothing">
+    <div class="well well-sm text-center">
+        <h1 class="title">Clothing</h1>
+    </div>
+    <div class="container no-display">
+        <div class="row">
+            <div id="Clothing-Carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-md-3" ng-repeat="i in products[0]">
+                                <div class="wow fadeIn panel panel-default product" data-wow-delay="1s" align="center" ng-click="showProduct()">
+                                    <div class="panel-body">
+                                        <img ng-src="../images/screens/{{i.image}}.jpg" class="img-responsive" />
+                                    </div>
+                                    <div class="panel-footer">
+                                        <span class="text-left">
+                                            <h3 class="item-name"><small>{{i.name}}</small></h3>
+                                            <p>&#8377; {{i.price}}</p>
+                                        </span>
+                                        <span class="shopping_cart glyphicon glyphicon-shopping-cart"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/row-fluid-->
+                    </div>
+
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-3" ng-repeat="i in products[1]">
+                                <div class="wow fadeIn panel panel-default product" data-wow-delay="1s" align="center" ng-click="showProduct()">
+                                    <div class="panel-body">
+                                        <img ng-src="../images/screens/{{i.image}}.jpg" class="img-responsive" />
+                                    </div>
+                                    <div class="panel-footer">
+                                        <span class="text-left">
+                                            <h3 class="item-name"><small>{{i.name}}</small></h3>
+                                            <p>&#8377; {{i.price}}</p>
+                                        </span>
+                                        <span class="shopping_cart glyphicon glyphicon-shopping-cart"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#Clothing-Carousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#Clothing-Carousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+
+            </div>
+            <!--end of carousel-->
+        </div>
+    </div>
+</section>
+
+<section id="bags">
+    <div class="well well-sm text-center">
+        <h1 class="title">Bags</h1>
+    </div>
+    <div class="container no-display">
+        <div class="row">
+            <div id="Bags-Carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-md-3" ng-repeat="i in bags[0]">
+                                <div class="wow fadeIn panel panel-default product" data-wow-delay="1s" align="center" ng-click="showProduct()">
+                                    <div class="panel-body">
+                                        <img ng-src="../images/screens/{{i.image}}.jpg" class="img-responsive" />
+                                    </div>
+                                    <div class="panel-footer">
+                                        <span class="text-left">
+                                            <h3 class="item-name"><small>{{i.name}}</small></h3>
+                                            <p>&#8377; {{i.price}}</p>
+                                        </span>
+                                        <span class="shopping_cart glyphicon glyphicon-shopping-cart"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/row-fluid-->
+                    </div>
+
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-3" ng-repeat="i in bags[1]">
+                                <div class="wow fadeIn panel panel-default product" data-wow-delay="1s" align="center" ng-click="showProduct()">
+                                    <div class="panel-body">
+                                        <img ng-src="../images/screens/{{i.image}}.jpg" class="img-responsive" />
+                                    </div>
+                                    <div class="panel-footer">
+                                        <span class="text-left">
+                                            <h3 class="item-name"><small>{{i.name}}</small></h3>
+                                            <p>&#8377; {{i.price}}</p>
+                                        </span>
+                                        <span class="shopping_cart glyphicon glyphicon-shopping-cart"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#Bags-Carousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#Bags-Carousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+
+            </div>
+            <!--end of carousel-->
+        </div>
+    </div>
+</section>

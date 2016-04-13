@@ -1,3 +1,6 @@
+.container-fluid {
+    padding: 0;
+}
 a.navbar-brand {
     padding: 10px 0 0 0;
 }
@@ -9,33 +12,38 @@ h3 {
 
 /*------------navigation bar---------------*/
 
+.navbar {
+    margin: 0;
+}
 ul.nav>li>a {
     padding: 15px 0;
 }
 ul.nav>li>a>span {
     padding: 0 10px;
+}
+ul.navbar-right>li>a>span {
     border-right: 1px solid black;
 }
-ul.nav>li:nth-last-child(-n+2)>a>span {
-    padding: 0 10px;
+ul.navbar-right>li:nth-last-child(-n+2)>a>span {
     border-right: none;
 }
 
-/*------------glyphicon---------------*/
+/*------------Categories---------------*/
 
-.glyphicon {
-    margin: auto 5px;
+.categories label:hover {
+    cursor: pointer;
+}
+.categories label {
+    padding: 10px;
+    font-size: 16;
+    color: gray;
 }
 
-/*------------main-content---------------*/
+/*------------carousel---------------*/
 
-.main-content {
-    margin-top: 5%;
-}
-@media screen and (max-width: 600px) {
-    .main-content {
-        margin-top: 10%;
-    }
+.carousel-caption {
+    color: white;
+    padding-bottom: 20%;
 }
 
 /*------search bar-----------*/
@@ -77,4 +85,45 @@ ul.nav>li:nth-last-child(-n+2)>a>span {
     right: 0px;
     padding: 10px 12px;
     pointer-events: none;
+}
+
+/*-----------clothing carousel-----------*/
+
+.well {
+    background: transparent;
+    border: none;
+    margin: 40px 0 0 0;
+}
+.panel {
+    margin-bottom: 0;
+}
+.product .panel-body {
+    padding: 0;
+}
+.product .panel-body:hover {
+    cursor: pointer;
+}
+.product .panel-body>img {
+    width: 100%;
+}
+.product .panel-footer {
+    position: relative;
+}
+.product .panel-footer span.shopping_cart {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    font-size: 40px;
+}
+span.shopping_cart:hover {
+    cursor: pointer;
+}
+
+/*-----------Footer-----------*/
+
+footer {
+    margin-top: 40px;
+}
+footer .panel {
+    border: none;
 }
