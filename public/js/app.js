@@ -8,15 +8,7 @@
                         templateUrl: '../views/home.html',
                         controller: 'HomeCtrl'
                     });
-                /*.state('Login', {
-                    url: '/login',
-                    templateUrl: '../views/login.html',
-                    controller: 'LoginCtrl'
-                }).state('Signup', {
-                                        url: '/signup',
-                                        templateUrl: '../views/signup.html',
-                                        controller: 'SignupCtrl'
-                                    })*/
+
 
                 $locationProvider.html5Mode({
                     enabled: true,
