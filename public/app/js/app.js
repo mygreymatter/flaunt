@@ -1,11 +1,11 @@
 (function () {
-    angular.module('flauntapp', ['ui.router', 'Home', 'Login', 'Signup', 'Navbar'])
+    angular.module('flauntapp', ['ui.router', 'FloatLabel', 'Home', 'Login', 'Signup', 'Navbar'])
         .config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
             function ($stateProvider, $urlRouterProvider, $locationProvider) {
                 $stateProvider
                     .state('Home', {
                         url: '/',
-                        templateUrl: '../views/home.html',
+                        templateUrl: '/app/views/home.html',
                         controller: 'HomeCtrl'
                     });
 

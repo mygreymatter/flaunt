@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flaunt</title>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <link rel="stylesheet" href="/lib/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="/lib/css/float-label.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="/lib/css/float-label2.css">-->
+    <link rel="stylesheet" type="text/css" href="/merchant/css/app.css">
+    <style>
+        .top {
+            margin-top: 50px;
+        }
+
+    </style>
+
+</head>
+
+<body ng-app="App">
+    <div class="container top">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <float-label id="firstname" type="text" label-text="name" ng-model="firstname"></float-label>
+                <float-label id="email" type="email" label-text="email" ng-model="email"></float-label>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+
+    <!--Javascript Library-->
+    <script src="/lib/js/jquery.min.js"></script>
+    <script src="/lib/js/angular.min.js"></script>
+    <script src="/lib/js/angular-ui-router.min.js"></script>
+    <script src="/lib/js/angular-float-label.js"></script>
+    <!--app related Javascript-->
+    <script src="/merchant/js/modules/home.js"></script>
+    <!--<script src="/merchant/js/app.js"></script>-->
+    <script>
+        angular.module('App', ['FloatLabel']);
+
+    </script>
+
+    <script>
+
+
+    </script>
+</body>
+
+</html>
