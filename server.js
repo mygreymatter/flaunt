@@ -17,6 +17,8 @@ mongoose.connect(configDB.url);
 
 app.set('port', PORT);
 app.use(express.static(__dirname + '/public'));
+/*app.use(express.static(__dirname + '/public/app'));
+app.use(express.static(__dirname + '/public/merchant'));*/
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({
     extended: true
@@ -33,8 +35,11 @@ app.use(flash());
 app.use(busboyBodyParser());
 
 require('./routes/authrouter.js')(app);
-app.get('/*', function (req, res) {
-    res.sendFile(__dirname + '/public/views/index.html');
+app.get('/store', function (req, res) {
+    res.sendFile(__dirname + '/public/merchant/views/merchant.html');
+});
+app.get('/', function (req, res) {
+    res.sendFile(__dirname + '/public/app/views/index.html');
     /*res.sendFile(__dirname + '/public/views/test.html');*/
 });
 
